@@ -1,1 +1,0 @@
-/home/anon/.config/st/
