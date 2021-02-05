@@ -1,1 +1,1 @@
-# nb-gentoo_files
+# My personal conf files
