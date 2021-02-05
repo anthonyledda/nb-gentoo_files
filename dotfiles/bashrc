@@ -7,3 +7,5 @@ fi
 
 # Alias
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+export EDITOR=/usr/bin/vi
