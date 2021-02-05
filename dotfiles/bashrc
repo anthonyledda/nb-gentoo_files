@@ -1,0 +1,9 @@
+# /etc/skel/.bashrc
+
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+# Alias
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"

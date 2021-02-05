@@ -1,0 +1,10 @@
+
+
+alias \
+        ll='ls -l' \
+        wish='iwctl station wlan0 show' \
+        wiscan='iwctl station wlan0 scan' \
+        wilist='iwctl station wlan0 get-networks' \
+        wicon='iwctl station wlan0 connect' \
+        widis='iwctl station wlan0 disconnect' \
+

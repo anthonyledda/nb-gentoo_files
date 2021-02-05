@@ -1,0 +1,1 @@
+emerge --sync && emerge --ask --update --deep --with-bdeps=y --newuse @world
