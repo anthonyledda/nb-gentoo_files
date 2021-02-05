@@ -27,6 +27,7 @@ www-client/firefox-bin
 media-gfx/feh
 media-video/mpv
 #net-misc/youtube-dl
+#net-wireless/iwd
 
 #fonts
 media-fonts/fontawesome
