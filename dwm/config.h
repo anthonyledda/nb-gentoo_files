@@ -67,8 +67,8 @@ static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
-// Lock screen
-static const char *lock[]   = { "xscreensaver-command", "--lock", NULL };
+//lock screen
+static const char *lock[]   = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -97,8 +97,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ 0,                       	XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ 0,                       	XF86XK_AudioMute, spawn, {.v = mutevol } },
-	{ 0,                       	XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lock } },
+	{ 0,                       	XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },	
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lock } },	
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
