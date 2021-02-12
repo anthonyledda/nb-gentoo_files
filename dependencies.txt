@@ -17,6 +17,7 @@ x11-misc/xclip
 x11-misc/pcmanfm
 x11-terms/rxvt-unicode
 x11-apps/xbacklight
+x11-misc/xautolock
 
 #misc
 app-editors/neovim
