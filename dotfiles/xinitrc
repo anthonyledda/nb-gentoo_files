@@ -2,7 +2,7 @@
 slstatus &
 #dwmstatus 2>&1 >/dev/null &
 
-# Uncomment and edit to set the wallpaper.
+# wallpaper.
 feh --bg-fill ~/Pictures/Mountain.jpg &
 
 # lockscreen
