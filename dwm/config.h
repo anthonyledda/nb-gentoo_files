@@ -6,6 +6,12 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static unsigned int gappih          = 20;       /* horiz inner gap between windows */
+static unsigned int gappiv          = 15;       /* vert inner gap between windows */
+static unsigned int gappoh          = 15;       /* horiz outer gap between windows and screen edge */
+static unsigned int gappov          = 30;       /* vert outer gap between windows and screen edge */
+static int swallowfloating          = 0;        /* 1 means swallow floating windows by default */
+static int smartgaps                = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 5;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=16" };
@@ -38,7 +44,8 @@ static const Rule rules[] = {
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
-
+#define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
+#include "vanitygaps.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -109,6 +116,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+	{ MODKEY,                       XK_a,           togglegaps,     {0} },
+        { MODKEY|ShiftMask,             XK_a,           defaultgaps,    {0} },
+        { MODKEY,                       XK_y,           incrgaps,       {.i = +3 } },
+        { MODKEY,                       XK_x,           incrgaps,       {.i = -3 } },
 };
 
 /* button definitions */
