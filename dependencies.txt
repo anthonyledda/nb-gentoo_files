@@ -29,6 +29,8 @@ media-gfx/feh
 media-video/mpv
 #net-misc/youtube-dl
 #net-wireless/iwd
+app-shells/bash-completion
+app-shells/gentoo-bashcomp
 
 #fonts
 media-fonts/fontawesome

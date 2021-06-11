@@ -1,8 +1,7 @@
 # status bar
-slstatus &
-#dwmstatus 2>&1 >/dev/null &
+slstatus &> /dev/null &
 
-# wallpaper.
+# wallpaper
 feh --bg-fill ~/Pictures/Mountain.jpg &
 
 # lockscreen
@@ -10,6 +9,8 @@ xautolock -time 10 -locker slock &
 
 # Hides the mouse cursor after 3 seconds of inactivity
 unclutter -idle 3 &
+
 xrdb ~/.Xresources &
+
 # Saving a dwm log
-exec dwm > ~/.dwm.log
+dbus-launch dwm > ~/.dwm.log

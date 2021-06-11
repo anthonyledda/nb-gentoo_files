@@ -1,7 +1,8 @@
 
 
 alias \
-        ll='ls -l' \
+        sudo='doas' \
+	ll='ls -l' \
         wish='iwctl station wlan0 show' \
         wiscan='iwctl station wlan0 scan' \
         wilist='iwctl station wlan0 get-networks' \
